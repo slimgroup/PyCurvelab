@@ -1,0 +1,64 @@
+PyCurvelab - Python Wrappers for CurveLab
+
+This software was written by Darren Thomson and Gilles Hennenfent.
+Copyright owned by The University of British Columbia, 2006.  This
+software is distributed and certain rights granted under a License
+Agreement with The University of British Columbia. Please contact the
+authors or the UBC University Industry Liaison Office at 604-822-8580
+for further information.
+____________________________________________
+
+Pre-requisites:
+
+1. Python
+	-> version 2.3 or above
+	-> http://www.python.org
+
+2. SWIG
+	-> version 1.3 or above
+	-> http://www.swig.org
+
+3. Numpy
+	-> module must be available in your PYTHONPATH environment variable in order to be found by 
+	-> version 1.0 or above
+	-> http://numpy.scipy.org/
+
+4. CurveLab
+	-> version 2.0.2 or above
+	-> http://www.curvelet.org
+
+____________________________________________
+
+Installation:
+
+1. Unpack the PyCurvelab tarball
+
+2. Set these required environment variables:
+	-> FDCT: folder where your CurveLab installation is
+	-> FFTW: folder where your fftw installation is
+
+3. In the PyCurvelab folder, run the following command:
+	-> python setup.py build install
+	-> the package will be installed as pyct module
+
+4. In python, simply "import pyct" and you're off
+
+5. To see how to use, type "help(pyct.fdct2)" or "help(pyct.fdct3)"
+
+********
+setup.py uses python's distutils, which offers many options for a customized installation.
+run "python setup.py install --help" for more information
+********
+
+____________________________________________
+
+Troubleshooting:
+
+1. Subscribe to http://slim.eos.ubc.ca/mailman/listinfo/pycurvelab and post the message there.
+
+____________________________________________
+
+SLIM Software Administrator (softadmin@slimweb.eos.ubc.ca)
+Seismic Laboratory for Imaging and Modeling
+Dept. of Earth and Ocean Sciences
+The University of British Columbia

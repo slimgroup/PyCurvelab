@@ -21,15 +21,13 @@ University of British Columbia
 # 604-822-8580 for further information.
 
 try:
-	from fdct2 import *
+    from fdct2 import *
 except:
-	pass
+    pass
 
 try:
-	from fdct3 import *
+    from fdct3 import *
 except:
-	pass
-		
-from test import test,normtest
-					
+    pass
 
+from test import test, normtest

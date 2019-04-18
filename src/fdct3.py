@@ -6,15 +6,15 @@
 # 604-822-8580 for further information.
 
 import sys as __sys
-import fdct3_wrapper as _fdct3__f3
+from .fdct3_wrapper import *
 
 import numpy as _fdct3__n
-import fdct
+from .fdct import fdct
 
-_fdct3__f3.fdct_init()
+fdct_init()
 
 
-class fdct3(fdct.fdct):
+class fdct3(fdct):
     """
     3D FDCT using wrapping
 
@@ -53,7 +53,7 @@ class fdct3(fdct.fdct):
         f -
         n -
         """
-        parm = __f3.fdct3_param_wrapper(self.n[0], self.n[1], self.n[2], self.nbs, self.nba, self.ac)
+        parm = fdct3_param_wrapper(self.n[0], self.n[1], self.n[2], self.nbs, self.nba, self.ac)
 
         f = []
         n = []
@@ -78,7 +78,7 @@ class fdct3(fdct.fdct):
         if a.flags.carray:
             a = a.transpose().copy()
 
-        c = __f3.fdct3_wrapper(a, self.nbs, self.nba, self.ac)
+        c = fdct3_wrapper(a, self.nbs, self.nba, self.ac)
 
         if self.norm:
             pass
@@ -105,7 +105,7 @@ class fdct3(fdct.fdct):
         if not self.cpx:
             self.r2c(c)
 
-        a = __f3.ifdct3_wrapper(c, self.nbs, self.nba, self.ac, self.n[0], self.n[1], self.n[2])
+        a = ifdct3_wrapper(c, self.nbs, self.nba, self.ac, self.n[0], self.n[1], self.n[2])
 
         if not self.cpx:
             a = a.real

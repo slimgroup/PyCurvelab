@@ -6,15 +6,15 @@
 # 604-822-8580 for further information.
 
 import sys as __sys
-import fdct2_wrapper as _fdct2__f2
+from .fdct2_wrapper import *
 
 import numpy as _fdct2__n
-import fdct
+from .fdct import fdct
 
-_fdct2__f2.fdct_init()
+fdct_init()
 
 
-class fdct2(fdct.fdct):
+class fdct2(fdct):
     """
     2D FDCT using wrapping
 
@@ -54,7 +54,7 @@ class fdct2(fdct.fdct):
         f -
         n -
         """
-        parm = __f2.fdct2_param_wrapper(self.n[0], self.n[1], self.nbs, self.nba, self.ac)
+        parm = fdct2_param_wrapper(self.n[0], self.n[1], self.nbs, self.nba, self.ac)
 
         s = []
         f = []
@@ -82,7 +82,7 @@ class fdct2(fdct.fdct):
         if a.flags.carray:
             a = a.transpose().copy()
 
-        c = __f2.fdct2_wrapper(a, self.nbs, self.nba, self.ac)
+        c = fdct2_wrapper(a, self.nbs, self.nba, self.ac)
 
         if self.norm:
             self.normalize(c)
@@ -109,7 +109,7 @@ class fdct2(fdct.fdct):
         if not self.cpx:
             self.r2c(c)
 
-        a = __f2.ifdct2_wrapper(c, self.nbs, self.nba, self.ac, self.n[0], self.n[1])
+        a = ifdct2_wrapper(c, self.nbs, self.nba, self.ac, self.n[0], self.n[1])
 
         if not self.cpx:
             a = a.real

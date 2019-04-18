@@ -9,7 +9,7 @@ import numpy as _fdct__n
 import math as _fdct__math
 from scipy import fftpack as _fdct__fft
 
-from CLarray import CLarray, __n, __fft
+from .CLarray import CLarray, __n, __fft
 
 
 class fdct(object):

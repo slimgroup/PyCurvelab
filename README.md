@@ -1,9 +1,14 @@
 # PyCurvelab - Python Wrappers for CurveLab
 
-The software allows to compute Curvelet Transforms from Python 2.
- 
+The software allows to compute Curvelet Transforms from Python.
+
 This software is release under GPL version 2.
 
+Python compatibility:
+
+- Master branch holds experimental Python 3 version.
+- Last Python 2 version is in branch python2.
+ 
 ***
 
 ## Pre-requisites:

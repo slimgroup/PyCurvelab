@@ -203,7 +203,7 @@ PyObject* fdct3_param_wrapper(int n1,int n2,int n3,int nbs,int nbz,int ac)
 		PyList_SetItem(pnx,i,PyList_New(nx[i].size()));
 		for(j=0;j<nx[i].size();j++)
 		{
-			PyList_SetItem(PyList_GetItem(pnx,i),j,PyInt_FromLong(nx[i][j]));
+			PyList_SetItem(PyList_GetItem(pnx,i),j,PyLong_FromLong(nx[i][j]));
 			Py_INCREF(PyList_GetItem(PyList_GetItem(pnx,i),j));
 		}
 	}
@@ -213,7 +213,7 @@ PyObject* fdct3_param_wrapper(int n1,int n2,int n3,int nbs,int nbz,int ac)
 		PyList_SetItem(pny,i,PyList_New(ny[i].size()));
 		for(j=0;j<ny[i].size();j++)
 		{
-			PyList_SetItem(PyList_GetItem(pny,i),j,PyInt_FromLong(ny[i][j]));
+			PyList_SetItem(PyList_GetItem(pny,i),j,PyLong_FromLong(ny[i][j]));
 			Py_INCREF(PyList_GetItem(PyList_GetItem(pny,i),j));
 		}
 	}
@@ -223,7 +223,7 @@ PyObject* fdct3_param_wrapper(int n1,int n2,int n3,int nbs,int nbz,int ac)
 		PyList_SetItem(pnz,i,PyList_New(nz[i].size()));
 		for(j=0;j<nz[i].size();j++)
 		{
-			PyList_SetItem(PyList_GetItem(pnz,i),j,PyInt_FromLong(nz[i][j]));
+			PyList_SetItem(PyList_GetItem(pnz,i),j,PyLong_FromLong(nz[i][j]));
 			Py_INCREF(PyList_GetItem(PyList_GetItem(pnz,i),j));
 		}
 	}
@@ -244,7 +244,7 @@ PyObject* fdct3_param_wrapper(int n1,int n2,int n3,int nbs,int nbz,int ac)
 void fdct_init()
 {
 	// Load numpy API at the start
-	import_array();
+	_import_array();
 }
 
 

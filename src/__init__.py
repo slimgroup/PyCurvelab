@@ -20,16 +20,4 @@ University of British Columbia
 # the authors or the UBC University Industry Liaison Office at
 # 604-822-8580 for further information.
 
-try:
-	from fdct2 import *
-except:
-	pass
-
-try:
-	from fdct3 import *
-except:
-	pass
-		
-from test import test,normtest
-					
-
+from .test import test, normtest

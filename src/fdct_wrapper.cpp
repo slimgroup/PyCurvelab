@@ -12,6 +12,6 @@ for further information.
 void fdct_init()
 {
 	// Load numpy API at the start
-	import_array();
+	_import_array();
 }
 

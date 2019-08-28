@@ -2,7 +2,7 @@
 
 The software allows to compute Curvelet Transforms from Python.
 
-This software is release under GPL version 2.
+This software is release under MIT license.
 
 Python compatibility:
 

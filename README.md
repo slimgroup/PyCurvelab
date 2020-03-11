@@ -64,7 +64,7 @@ This software was written by Darren Thomson and Gilles Hennenfent from SLIM grou
 ### Address
 
 
-	SLIM Software Administrator (softadmin@slimweb.eos.ubc.ca)
+	SLIM Software Administrator (slimincloud@gmail.com)
 	Seismic Laboratory for Imaging and Modeling
 	Dept. of Earth, Ocean, and Atmospheric Sciences
 	The University of British Columbia

@@ -42,7 +42,7 @@ class fdct3(fdct):
                                 -> does not convert complex coefficients to
                                         real ones after the forward transform
         """
-        fdct.fdct.__init__(self, n, nbs, nba, ac, norm, vec, cpx)
+        fdct.__init__(self, n, nbs, nba, ac, norm, vec, cpx)
         self.f, self.sizes = self.param()
 
     def param(self):

@@ -112,9 +112,9 @@ class fdct(object):
             c[self.nbs-1][0] = c[self.nbs-1][0].real
 
         for i in range(1, end):
-            for j in range(len(c[i])/2):
+            for j in range(len(c[i])//2):
                 c[i][j] = __n.sqrt(2) * c[i][j].real
-                c[i][j+len(c[i])/2] = __n.sqrt(2) * c[i][j+len(c[i])/2].imag
+                c[i][j+len(c[i])//2] = __n.sqrt(2) * c[i][j+len(c[i])//2].imag
         c[i][0] = c[i][0].real
 
     def r2c(self, c):
@@ -133,11 +133,11 @@ class fdct(object):
             c[self.nbs-1][0] = __n.complex_(c[self.nbs-1][0])
 
         for i in range(1, len(c)):
-            for j in range(len(c[i])/2):
+            for j in range(len(c[i])//2):
                 c[i][j] = __n.complex_(c[i][j])
-                c[i][j].imag = -c[i][j+len(c[i])/2]
+                c[i][j].imag = -c[i][j+len(c[i])//2]
                 c[i][j] /= __n.sqrt(2)
-                c[i][j+len(c[i])/2] = c[i][j].conj()
+                c[i][j+len(c[i])//2] = c[i][j].conj()
 
     def getindex(self, loc):
         """

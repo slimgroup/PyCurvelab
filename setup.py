@@ -24,7 +24,7 @@ fftw_inc = os.path.join(FFTW, 'include')
 fftw_lib = os.path.join(FFTW, 'lib')
 fdct2 = os.path.join(FDCT, 'fdct_wrapping_cpp', 'src')
 fdct3 = os.path.join(FDCT, 'fdct3d', 'src')
-pycl_inc = 'src'
+pycl_inc = 'pyct'
 
 try:
     import numpy
@@ -42,13 +42,12 @@ setup(name='pyct',
       url='http://slim.eos.ubc.ca',
       ext_package='pyct',
       ext_modules=[Extension('_fdct2_wrapper',
-                   [os.path.join('src', 'fdct2_wrapper.cpp'), os.path.join('src', 'fdct2_wrapper.i')],
+                   [os.path.join('pyct', 'fdct2_wrapper.cpp'), os.path.join('pyct', 'fdct2_wrapper.i')],
                    include_dirs=[fdct2, fftw_inc, npy_inc, pycl_inc],
                    library_dirs=[fdct2, fftw_lib], libraries=['fdct_wrapping', 'fftw']),
                    Extension('_fdct3_wrapper',
-                   [os.path.join('src', 'fdct3_wrapper.cpp'), os.path.join('src', 'fdct3_wrapper.i')],
+                   [os.path.join('pyct', 'fdct3_wrapper.cpp'), os.path.join('pyct', 'fdct3_wrapper.i')],
                    include_dirs=[fdct3, fftw_inc, npy_inc, pycl_inc],
                    library_dirs=[fdct3, fftw_lib], libraries=['fdct3d', 'fftw'])],
-      package_dir={'pyct': 'src'},
       packages=['pyct']
       )
